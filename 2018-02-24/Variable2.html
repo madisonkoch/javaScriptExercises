@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Notes (Part 2)</title>
+</head>
+<body>
+    <!--id can only appear once in an html for every unique id name -->
+    <p id="target"></p>
+</body>
+<!--script means there is javascript between the tags -->
+<script>
+    //document.querySelector('#target').innerHTML = 'hello world!';
+        //select the element with id = "target" and put 'hello world' in that element
+            //this will only identify the p with id="target", but if you use the below with a foreloop you can do it to all p's
+                //document.querySelectorAll('#target').innerHTML = 'hello world'
+
+    //alert('hello world!');
+        //this will create a window pop-up that says 'hello world!' with an "okay" button to exit out
+
+    // prompt('hello world?');
+        //creates pop-up with an input field.
+    
+    // let response = prompt('Do you like pizza?');
+    // document.querySelector ('#target').innerHTML=response;
+        //creates pop-up with an input field and whatever is submitted in the field populates in the p element with id="target"
+
+    // let response = prompt('Do you like pizza?');
+    // if (response.toLowerCase()==='yes'){
+    // document.querySelector ('#target').innerHTML=response;
+    // }
+        //only returns the input data if it equals 'yes' --- reminder: case sensitive, so Yes != yes
+
+    // let response = prompt('Do you like pizza?');
+    // if (response.toLowerCase()==='yes'){
+    // document.querySelector ('#target').innerHTML=`Hell ${response} you do!`
+    // }else if (response.toLowerCase()==='no'){
+    // document.querySelector ('#target').innerHTML=`What's wrong with you?!`;
+    // }else {
+    // document.querySelector ('#target').innerHTML=`${response} is not a valid response, please answer yes or no.`;
+    // }
+
+    const foodArray = ['pizza','burgers','ice cream'];
+        // [] denote the item is an array
+
+    let response = prompt('What is your favorite food?');
+
+    if(foodArray.includes(response.toLowerCase()))
+     {
+        document.querySelector('#target').innerHTML = `Mama Mia! That's a good choice!`
+    }
+
+</script>
+</html>
